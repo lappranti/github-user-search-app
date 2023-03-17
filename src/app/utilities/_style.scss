@@ -1,0 +1,60 @@
+//#### FUNCTION TO REM
+
+@function toRem($pixels) {
+  @return #{$pixels / 16}rem;
+}
+
+//## COLORS
+
+@function lightColors($nb) {
+  @if ($nb == 1) {
+    @return #0079ff;
+  } @else if ($nb == 2) {
+    @return #697c9a;
+  } @else if ($nb == 3) {
+    @return #4b6a9b;
+  } @else if ($nb == 4) {
+    @return #2b3442;
+  } @else if ($nb == 5) {
+    @return #f6f8ff;
+  } @else if($nb == 6) {
+    @return #fefefe;
+  }
+}
+
+@function darkColors($nb) {
+  @if ($nb == 1) {
+    @return #0079ff;
+  } @else if ($nb == 2) {
+    @return #ffffff;
+  } @else if ($nb == 3) {
+    @return #141d2f;
+  } @else if ($nb == 4) {
+    @return #1e2a47;
+  }
+}
+
+@mixin typo($type) {
+  font-style: normal;
+  @if ($type == "h1") {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 39px;
+  } @else if($type == "h2") {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 33px;
+  } @else if($type == "h3") {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+  } @else if($type == "h4") {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 19px;
+  } @else {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+  }
+}
